@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Landing Page, Introduce user to what the application does-->
+<div class="jumbotron">
+    <h1>Movie Management System</h1>
+    <p class="lead">
+        This is a simple ASP.NET MVC content management system that allows users to keep track of their movie collections with basic CRUD functionality.                    <a>@Html.ActionLink("Movie Management System", "Index", "Home")</a>
+        directs users back to this landing page,<a>@Html.ActionLink("View Movies", "Index", "Movies")</a>
+        directs users to the Index page in the Movies view to display all films in the database. <a>@Html.ActionLink("Add Movie", "Create", "Movies")</a> directs users to the Create page in the Movies view to add a new film to the database, and <a>@Html.ActionLink("Family Friendly", "Index", "Admin")</a> directs users to the Index page in the Admin view where a partial view displays the Title, Director, and Rating for all family-friendly movies in the database
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Create</h2>
+        <p>
+            Create a new movie entry and save the record to the database.
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>Read</h2>
+        <p>
+            Movies are retrieved from the database and the entry details are displayed to the user. 
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>Update</h2>
+        <p>Retrieve an entry from the database, modify its contents, and save it back to the database.</p>
+    </div>
+    <div class="col-md-3">
+        <h2>Delete</h2>
+        <p>Remove a movie from the database.</p>
+    </div>
+</div>

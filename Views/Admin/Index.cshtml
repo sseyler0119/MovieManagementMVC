@@ -1,0 +1,40 @@
+﻿<!--import ViewModels and MovieVM list to display rendered results to screen -->
+@using MovieManagementMVC.ViewModels
+@model List<MovieVM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Family Friendly Movies</h2>
+
+<table class="table table-hover">
+    <tr class="bg-primary">
+        <th>
+            Title
+        </th>
+        <th>
+            Director
+        </th>
+        <th>
+            Rating
+        </th>
+    </tr>
+
+    <!-- output each movie in a new row -->
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <td>
+                @movie.Title
+            </td>
+            <td>
+                @movie.Director
+            </td>
+            <td>
+                @movie.Rating
+            </td>
+        </tr>
+    }
+</table>
+
