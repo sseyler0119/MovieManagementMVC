@@ -23,3 +23,118 @@ textarea {
     max-width: 280px;
 }
 
+/* Custom Styling */
+
+/* table */
+.table-header {
+    background-color: #424549 !important;
+    color: white !important;
+}
+
+/* alternate row colors */
+tr:nth-child(odd) {
+    background-color: rgba(114,137,218,0.6);
+}
+
+.table-link-text {
+    font-weight: 600 !important;
+    color: #282b30 !important;
+    text-decoration: none !important;
+}
+
+.table-link-text:hover {
+     color: #43ED35 !important;       
+}
+
+/* movie card styling */
+.movie-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 8px;
+    width: 60%;
+    background-color: #424549;
+    color: white;
+    padding: 15px;
+}
+
+.card-img {
+    border-radius: 8px;
+    margin: 20px 10% 20px 10%;
+}
+
+.movie-card-container {
+    max-width: 280px;
+    margin: 20px 10% 20px 10%;
+}
+
+.card-header-text {
+    margin: 20px 10% 20px 10%;
+}
+
+/* buttons */
+.movie-button {
+    padding: 5px 15px 5px 15px !important;
+    margin: 5px 10px 5px 0px !important;
+    background-color: #7289da !important;
+    color: black !important;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+
+.movie-button:hover {
+    border: solid 2px white;
+}
+
+/* container */
+.movie-form {
+    margin-top: 40px !important; /* create extra space between container and navbar*/
+}
+
+/* landing page */
+.landing-page-header {
+    margin-top: 40px !important; /* create extra space between container and navbar*/
+    background-color: #282b30;
+    color: #9d9d9d;
+}
+
+.header-text {
+    font-weight: lighter !important;
+    color: #9d9d9d;
+}
+
+.landing-page-mini {
+    background-color: #7289da !important;
+    color: #9d9d9d !important;
+}
+
+.mini-card {
+    background-color: #7289da !important;
+    color: #282b30 !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+    border-radius: 5px !important;
+}
+
+
+/* Add some padding inside the card container */
+.card-container {
+    padding: 2px 16px;
+    height: 200px; 
+}
+
+.landing-page-row {
+    padding-top: 40px;
+    padding-bottom: 40px; 
+    margin-bottom: 40px;
+}
+
+/* override action link text */
+.link-text {
+    text-decoration: none !important;
+    color: #7289da !important;
+}
+
+.link-text:hover {
+    color: #43ED35 !important;
+}
+

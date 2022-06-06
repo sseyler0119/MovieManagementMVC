@@ -5,63 +5,42 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Movie Details</h2>
 
-<div>
-    <h4>Movie</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+<div class="row movie-form">
+    <div class="movie-card col-lg-4">
+        <h2 class="card-header-text">Movie Details</h2>
+        <img class="card-img" src="~/Content/Images/pexels-dmitry-demidov-3921045.jpg" alt="Film Reel" style="width:80%">
+        <div class="movie-card-container">
+            <h3>
+                <b>
+                    @Html.DisplayFor(model => model.Title)
+                </b>
+            </h3>
+            <p><i>directed by</i></p>
+            <h5>
+                @Html.DisplayFor(model => model.Director)
+            </h5>
+            <p>
+                Released: @Html.DisplayFor(model => model.Year)
+            </p>
+            <p>
+                Rating: @Html.DisplayFor(model => model.Rating)
+            </p>
+            <p>
+                Genre: @Html.DisplayFor(model => model.Genre)
+            </p>
+            <p>
+                Format: @Html.DisplayFor(model => model.Format)
+            </p>
+            <!-- manual override of ActionLink text underline/color using inline style-->
+            <button class="btn movie-button">
+                @Html.ActionLink("Edit", "Edit", new { id = Model.MovieId }, new { @style = "text-decoration:none; color:black;" })
+            </button>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+            <button class="btn movie-button">
+                @Html.ActionLink("Back to List", "Index", new { @class = "link-text" }, new { @style = "text-decoration:none; color:black;" })
+            </button>
+        </div>
+    </div>
+ </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Director)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Director)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Year)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Year)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Genre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Genre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Format)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Format)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

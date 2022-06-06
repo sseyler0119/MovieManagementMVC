@@ -21,13 +21,13 @@ namespace MovieManagementMVC.Controllers
                 // iterate through each movie in the list, instantiate new MovieVM object, map variables accordingly, and add the movie to movieVms list
                 foreach(var m in movies)
                 {
-                    var movieVm = new MovieVM(); // declare familyVm variable and instantiate with MovieVM
+                    var movieVm = new MovieVM(); // declare movieVm variable and instantiate with MovieVM
                     movieVm.Title = m.Title; // map Movie Title to MovieVM Title
                     movieVm.Director = m.Director; // map Movie Director to MovieVM Director
                     movieVm.Rating = m.Rating; // map Movie Rating to MovieVM Rating
                     movieVms.Add(movieVm); // add entry to movieVms list
                 }
-                return View(movieVms); // return partial model to view
+                return View(movieVms); // return  list to view
             }
         }
     }
